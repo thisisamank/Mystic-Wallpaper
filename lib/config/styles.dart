@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/pallete.dart';
 
 class AppTextStyles {
   static final kBigTextStyle = TextStyle(
     color: Pallete.kPrimaryBlack,
-    fontSize: 22.0,
+    fontSize: 22,
     fontFamily: "Nunito",
     fontWeight: FontWeight.bold,
   );
@@ -22,11 +23,11 @@ class AppTextStyles {
     fontFamily: "Nunito",
     fontWeight: FontWeight.bold,
     color: Pallete.kPrimaryTeal,
-    fontSize: 20.0,
+    fontSize: 20,
   );
   static final kCategorySubTitleTextStyle = TextStyle(
     fontFamily: "Nunito",
     color: Pallete.kPrimaryBlack,
-    fontSize: 12.0,
+    fontSize: 12,
   );
 }

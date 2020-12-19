@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class ImagePath {
+class ImageStore {
   static final logo = 'assets/images/icons/logo.png';
   static final bottomButton = 'assets/images/icons/bottom-button.png';
   static final hamburgerButton = 'assets/images/icons/hamburger-button.png';
@@ -19,21 +19,21 @@ class ImagePath {
   static final vishnu = 'assets/images/illustrations/vishnu.png';
 }
 
-class AssetImagePath {
-  static final logo = AssetImage(ImagePath.logo);
-  static final bottomButton = AssetImage(ImagePath.bottomButton);
-  static final hamburgerButton = AssetImage(ImagePath.hamburgerButton);
-  static final profile = AssetImage(ImagePath.profile);
-  static final starSmall = AssetImage(ImagePath.starSmall);
-  static final starBig = AssetImage(ImagePath.starBig);
-  static final brahma = AssetImage(ImagePath.brahma);
-  static final durga = AssetImage(ImagePath.durga);
-  static final ganesh = AssetImage(ImagePath.ganesh);
-  static final hanuman = AssetImage(ImagePath.hanuman);
-  static final krishna = AssetImage(ImagePath.krishna);
-  static final lakshmi = AssetImage(ImagePath.lakshmi);
-  static final ram = AssetImage(ImagePath.ram);
-  static final saraswati = AssetImage(ImagePath.saraswati);
-  static final shiv = AssetImage(ImagePath.shiv);
-  static final vishnu = AssetImage(ImagePath.vishnu);
+class AssetImageStore {
+  static final logo = AssetImage(ImageStore.logo);
+  static final bottomButton = AssetImage(ImageStore.bottomButton);
+  static final hamburgerButton = AssetImage(ImageStore.hamburgerButton);
+  static final profile = AssetImage(ImageStore.profile);
+  static final starSmall = AssetImage(ImageStore.starSmall);
+  static final starBig = AssetImage(ImageStore.starBig);
+  static final brahma = AssetImage(ImageStore.brahma);
+  static final durga = AssetImage(ImageStore.durga);
+  static final ganesh = AssetImage(ImageStore.ganesh);
+  static final hanuman = AssetImage(ImageStore.hanuman);
+  static final krishna = AssetImage(ImageStore.krishna);
+  static final lakshmi = AssetImage(ImageStore.lakshmi);
+  static final ram = AssetImage(ImageStore.ram);
+  static final saraswati = AssetImage(ImageStore.saraswati);
+  static final shiv = AssetImage(ImageStore.shiv);
+  static final vishnu = AssetImage(ImageStore.vishnu);
 }
