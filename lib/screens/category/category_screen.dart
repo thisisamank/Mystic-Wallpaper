@@ -1,54 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:mystic_wallpaper/config/config.dart';
-import 'package:mystic_wallpaper/models/category.dart';
+import 'package:mystic_wallpaper/screens/category/widget/category_list.dart';
+import 'package:mystic_wallpaper/screens/global_widgets/bottom_navbar.dart';
+import 'package:mystic_wallpaper/screens/global_widgets/secondary_appbar.dart';
 
 class CategoryScreen extends StatelessWidget {
+  static final route = '/categories';
+
   @override
   Widget build(BuildContext context) {
-    final _screenWidth = MediaQuery.of(context).size.width;
-    final _screenHeight = MediaQuery.of(context).size.height;
-    return ListView.separated(
-        itemCount: Category.allCategories.length,
-        separatorBuilder: (context, index) => SizedBox(
-              height: 30,
-            ),
-        physics: BouncingScrollPhysics(),
-        itemBuilder: (BuildContext context, int index) {
-          return Center(
-            child: Container(
-              width: _screenWidth * 0.90,
-              height: _screenHeight * 0.25,
-              decoration: BoxDecoration(
-                gradient: Category.allCategories[index].background,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image(
-                    image: AssetImage(
-                      Category.allCategories[index].illustation,
-                    ),
-                    fit: BoxFit.fitHeight,
-                    height: _screenHeight * 0.2,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        Category.allCategories[index].categoryName,
-                        style: AppTextStyles.kCategoryTitleTextStyle,
-                      ),
-                      Text(
-                          '${Category.allCategories[index].numberOfImages} Images',
-                          style: AppTextStyles.kCategorySubTitleTextStyle),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          );
-        });
+    return Scaffold(
+      appBar: SecondaryAppBar(
+        title: "Category",
+      ),
+      body: CategoryList(),
+      bottomNavigationBar: BottomNavBar(),
+    );
   }
 }

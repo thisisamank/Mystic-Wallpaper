@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/pallete.dart';
 
-class AppTextStyles {
+class AppStyles {
   static final kBigTextStyle = TextStyle(
     color: Pallete.kPrimaryBlack,
     fontSize: 22,
@@ -29,5 +29,10 @@ class AppTextStyles {
     fontFamily: "Nunito",
     color: Pallete.kPrimaryBlack,
     fontSize: 12,
+  );
+
+  static final kMainAppBarTheme = AppBarTheme(
+    elevation: 0,
+    color: Colors.white,
   );
 }
