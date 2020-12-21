@@ -27,7 +27,7 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
           ),
           Image.asset(
             ImageStore.logo,
-            width: 100,
+            width: 40,
           ),
           RawMaterialButton(
             onPressed: () {},

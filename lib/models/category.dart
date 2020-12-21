@@ -6,13 +6,16 @@ class Category {
     this.background,
     this.categoryName,
     this.illustation,
+    this.flatBackground,
+    this.textStyle,
   });
 
+  final textStyle;
   final categoryName;
   final numberOfImages = 30;
   final background;
   final illustation;
-
+  final flatBackground;
   static final allCategories = [
     Category(
       categoryName: 'Lord Shiva',
@@ -94,6 +97,34 @@ class Category {
         end: Alignment.centerRight,
         colors: Pallete.kLakshmiGradientColor,
       ),
+    ),
+  ];
+
+  static final homePageCategories = [
+    Category(
+      textStyle: AppStyles.kSemiBoldTextStyle,
+      categoryName: 'Shiva',
+      flatBackground: Pallete.kPrimaryTeal,
+    ),
+    Category(
+      textStyle: AppStyles.kSemiBoldTealTextStyle,
+      categoryName: 'Durga',
+      flatBackground: Pallete.kSecondaryTeal,
+    ),
+    Category(
+      textStyle: AppStyles.kSemiBoldTealTextStyle,
+      categoryName: 'Ganesh',
+      flatBackground: Pallete.kSecondaryTeal,
+    ),
+    Category(
+      textStyle: AppStyles.kSemiBoldTealTextStyle,
+      categoryName: 'Ram',
+      flatBackground: Pallete.kSecondaryTeal,
+    ),
+    Category(
+      textStyle: AppStyles.kSemiBoldTealTextStyle,
+      categoryName: 'Show More',
+      flatBackground: Pallete.kSecondaryTeal,
     ),
   ];
 }

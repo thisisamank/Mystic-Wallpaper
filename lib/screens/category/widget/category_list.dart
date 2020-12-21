@@ -33,7 +33,7 @@ class CategoryList extends StatelessWidget {
                       Category.allCategories[index].illustation,
                     ),
                     fit: BoxFit.fitHeight,
-                    height: _screenHeight * 0.2,
+                    height: _screenHeight * 0.18,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,

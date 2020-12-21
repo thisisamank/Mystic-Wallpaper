@@ -12,12 +12,25 @@ class AppStyles {
   static final kNormalTextStyle = TextStyle(
     fontFamily: "Nunito",
     fontSize: 16,
+    fontWeight: FontWeight.w500,
   );
   static final kBoldTextStyle = TextStyle(
     fontFamily: "Nunito",
     fontSize: 18,
     fontWeight: FontWeight.bold,
     color: Pallete.kPrimaryTeal,
+  );
+  static final kSemiBoldTealTextStyle = TextStyle(
+    fontFamily: "Nunito",
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Pallete.kPrimaryTeal,
+  );
+  static final kSemiBoldTextStyle = TextStyle(
+    fontFamily: "Nunito",
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Pallete.kSecondaryTeal,
   );
   static final kCategoryTitleTextStyle = TextStyle(
     fontFamily: "Nunito",

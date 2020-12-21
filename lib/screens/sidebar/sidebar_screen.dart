@@ -48,7 +48,7 @@ class AppDrawer extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Pallete.kSecondaryTeal),
                 child: Padding(
-                  padding: EdgeInsets.all(12.0),
+                  padding: EdgeInsets.all(20.0),
                   child: Center(
                     child: Text(Constants.appSubtitle,
                         style: AppStyles.kNormalTextStyle),
@@ -67,7 +67,11 @@ class AppDrawer extends StatelessWidget {
                   itemCount: DrawerData.drawerData.length,
                   itemBuilder: (BuildContext context, int index) {
                     return RawMaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        if (index == 0) {
+                          Navigator.pushNamed(context, '/categories');
+                        }
+                      },
                       child: Container(
                         width: _screenWidth * 0.50,
                         height: _screenHeight * 0.09,
