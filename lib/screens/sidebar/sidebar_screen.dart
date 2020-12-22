@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/constants.dart';
-import 'package:mystic_wallpaper/models/sidebar.dart';
+import 'package:mystic_wallpaper/provider/models/sidebar.dart';
 
 class AppDrawer extends StatelessWidget {
   @override

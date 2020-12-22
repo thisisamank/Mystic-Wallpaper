@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mystic_wallpaper/models/category.dart';
+import 'package:mystic_wallpaper/provider/models/category.dart';
 
 class CategoryBadges extends StatelessWidget {
   @override
