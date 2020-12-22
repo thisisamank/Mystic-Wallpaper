@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 
 class BottomNavBar extends StatelessWidget {
+  final route;
+  BottomNavBar({this.route});
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,7 +30,9 @@ class BottomNavBar extends StatelessWidget {
             ),
             RawMaterialButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/categories');
+                if (route != null) {
+                  Navigator.pushNamed(context, route);
+                }
                 print("Clicked");
               },
               child: Image.asset(

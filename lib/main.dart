@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/all.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/routes/routes.dart';
 import 'package:mystic_wallpaper/screens/global_widgets/bottom_navbar.dart';
@@ -7,7 +8,7 @@ import 'package:mystic_wallpaper/screens/home/home_screens.dart';
 import 'package:mystic_wallpaper/screens/sidebar/sidebar_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,7 +23,9 @@ class MyApp extends StatelessWidget {
         body: HomeScreen(),
         appBar: MainAppBar(),
         drawer: AppDrawer(),
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: BottomNavBar(
+          route: '/categories',
+        ),
       ),
     );
   }

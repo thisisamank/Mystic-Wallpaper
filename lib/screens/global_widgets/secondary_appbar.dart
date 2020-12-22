@@ -24,7 +24,7 @@ class SecondaryAppBar extends StatelessWidget with PreferredSizeWidget {
           ),
           Text(
             title,
-            style: AppStyles.kBigTextStyle,
+            style: AppStyles.kBoldHomeTextStyles,
           ),
           SizedBox(
             width: _screenWidth * 0.35,

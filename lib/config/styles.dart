@@ -44,6 +44,12 @@ class AppStyles {
     fontSize: 12,
   );
 
+  static final kBoldHomeTextStyles = TextStyle(
+    color: Pallete.kPrimaryTeal,
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Nunito',
+  );
   static final kMainAppBarTheme = AppBarTheme(
     elevation: 0,
     color: Colors.white,

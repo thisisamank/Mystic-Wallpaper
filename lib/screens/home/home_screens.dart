@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
 import 'package:mystic_wallpaper/config/config.dart';
-import 'package:mystic_wallpaper/models/wallpapers.dart';
+import 'package:mystic_wallpaper/provider/wallpaper_provider.dart';
 import 'package:mystic_wallpaper/screens/home/widgets/category_badge.dart';
+import 'package:mystic_wallpaper/screens/home/widgets/home_card_listview_network.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final wallpapers = useProvider(wallpaperProvider);
     return Container(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 28),
@@ -17,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Text(
               "Categories",
-              style: AppStyles.kBigTextStyle,
+              style: AppStyles.kBoldHomeTextStyles,
             ),
             SizedBox(
               height: 35,
@@ -28,40 +32,19 @@ class HomeScreen extends StatelessWidget {
             ),
             Text(
               "Mystic's Exclusive",
-              style: AppStyles.kBigTextStyle,
+              style: AppStyles.kBoldHomeTextStyles,
             ),
             SizedBox(
               height: 35,
             ),
-            Container(
-              height: 370,
-              width: double.infinity,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemCount: Wallpapers.wallpapers.length,
-                itemBuilder: (context, index) {
-                  return ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Container(
-                      decoration: BoxDecoration(boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 20.0,
-                        )
-                      ]),
-                      child: Image.network(
-                        Wallpapers.wallpapers[index].thumbnailImg,
-                        width: 280,
-                        height: 350,
-                        fit: BoxFit.fitWidth,
-                      ),
-                    ),
-                  );
-                },
-                separatorBuilder: (context, index) => SizedBox(
-                  width: 30,
-                ),
-              ),
+            wallpapers.when(
+              data: (config) {
+                return HomeCardListViewNetWork(
+                  data: config,
+                );
+              },
+              loading: () => CircularProgressIndicator(),
+              error: (err, stack) => Text("error"),
             ),
           ],
         ),
