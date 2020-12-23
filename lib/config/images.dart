@@ -18,6 +18,7 @@ class ImageStore {
   static final shiv = 'assets/images/illustrations/shiv.png';
   static final vishnu = 'assets/images/illustrations/vishnu.png';
   static final leftArrow = 'assets/images/icons/arrow-left.png';
+  static final loadingImg = 'assets/images/icons/loading.png';
 }
 
 class AssetImageStore {

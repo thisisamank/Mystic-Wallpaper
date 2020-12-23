@@ -18,7 +18,7 @@ class WallpapersModel extends Equatable {
         godCategory,
       ];
 
-  factory WallpapersModel.fromJson({Map json}) {
+  factory WallpapersModel.fromJson({Map<String, dynamic> json}) {
     final godCategoryFromJson = json['category']['category'];
     final godMainImage = json['src'][0]['url'];
 

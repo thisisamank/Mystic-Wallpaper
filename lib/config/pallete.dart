@@ -13,6 +13,10 @@ class Pallete {
     Color(0xFFAEDAF3),
     Color(0xFF68C2F4),
   ];
+  static const kVishnuGradientColor = [
+    Color(0xFFB5C3F8),
+    Color(0xFFA5B9FF),
+  ];
   static const kDurgaGradientColor = [
     Color(0xFFFB9191),
     Color(0xFFF6CECE),
