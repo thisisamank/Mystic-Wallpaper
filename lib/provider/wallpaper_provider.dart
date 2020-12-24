@@ -8,6 +8,6 @@ final wallpaperProvider =
 });
 
 final wallpaperCategoryProvider = FutureProvider.autoDispose
-    .family<List<WallpapersModel>, int>((ref, id) async {
-  return await WallpaperRepo().getWallpaperFromCategory(categoryId: id);
+    .family<List<WallpapersModel>, String>((ref, id) async {
+  return WallpaperRepo().getWallpaperFromCategory(categoryId: id);
 });

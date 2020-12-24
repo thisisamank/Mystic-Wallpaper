@@ -30,4 +30,14 @@ class WallpapersModel extends Equatable {
       thumbnailImg: godThumbnailImage,
     );
   }
+
+  factory WallpapersModel.fromCategoryJson({Map json}) {
+    final godMainImage = json['src'][0]['url'];
+    final godThumbnailImage = json['src'][0]['formats']['small']['url'];
+    return WallpapersModel(
+        id: json['id'],
+        godCategory: json['category'],
+        wallpaperImg: godMainImage,
+        thumbnailImg: godThumbnailImage);
+  }
 }

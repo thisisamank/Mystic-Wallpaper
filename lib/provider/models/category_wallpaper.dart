@@ -7,9 +7,9 @@ class CategoryWithWallpaper {
   factory CategoryWithWallpaper.fromJson({Map<String, dynamic> json}) {
     final id = json['id'];
     List wallpapersJson = json['wallpapers'];
-    var wallpaperObj;
+    List<WallpapersModel> wallpaperObj = [];
     for (var wallpaper in wallpapersJson) {
-      wallpaperObj.add(WallpapersModel.fromJson(json: wallpaper));
+      wallpaperObj.add(WallpapersModel.fromCategoryJson(json: wallpaper));
     }
     return CategoryWithWallpaper(wallpapers: wallpaperObj, id: id);
   }

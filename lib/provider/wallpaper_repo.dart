@@ -25,8 +25,7 @@ class WallpaperRepo {
       {final categoryId}) async {
     var url = '${Keys.categoryApiUrl}/$categoryId';
     var res = await http.get(url);
-    List<WallpapersModel> wallpapersObj = [];
-    final wallpapersFromCategoryJson = jsonDecode(res.body)[0];
+    final wallpapersFromCategoryJson = jsonDecode(res.body);
     CategoryWithWallpaper categoryWithWallpaper =
         CategoryWithWallpaper.fromJson(json: wallpapersFromCategoryJson);
     return categoryWithWallpaper.wallpapers;

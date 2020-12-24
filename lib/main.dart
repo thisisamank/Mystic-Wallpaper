@@ -4,6 +4,7 @@ import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/routes/routes.dart';
 import 'package:mystic_wallpaper/screens/global_widgets/bottom_navbar.dart';
 import 'package:mystic_wallpaper/screens/global_widgets/main_app_bar.dart';
+import 'package:mystic_wallpaper/screens/god_wallpaper/god_wallpaper_screen.dart';
 import 'package:mystic_wallpaper/screens/home/home_screens.dart';
 import 'package:mystic_wallpaper/screens/sidebar/sidebar_screen.dart';
 
