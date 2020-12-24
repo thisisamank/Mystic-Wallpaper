@@ -22,7 +22,7 @@ class WallpaperRepo {
   }
 
   Future<List<WallpapersModel>> getWallpaperFromCategory(
-      {int categoryId}) async {
+      {final categoryId}) async {
     var url = '${Keys.categoryApiUrl}/$categoryId';
     var res = await http.get(url);
     List<WallpapersModel> wallpapersObj = [];

@@ -4,16 +4,18 @@ import 'package:mystic_wallpaper/provider/models/category.dart';
 class CategoryBadges extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _screenHeight = MediaQuery.of(context).size.height;
+    final _screenWidth = MediaQuery.of(context).size.width;
     return Container(
       width: double.infinity,
-      height: 50,
+      height: _screenHeight * 0.08,
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemBuilder: (BuildContext context, int index) {
             return RawMaterialButton(
               onPressed: () {},
               child: Container(
-                width: 125,
+                width: _screenWidth / 3.2,
                 decoration: BoxDecoration(
                   color: Category.homePageCategories[index].flatBackground,
                   borderRadius: BorderRadius.circular(6),

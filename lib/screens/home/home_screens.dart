@@ -9,33 +9,24 @@ import 'package:mystic_wallpaper/screens/home/widgets/home_card_listview_network
 class HomeScreen extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     final wallpapers = useProvider(wallpaperProvider);
     return Container(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 28),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            SizedBox(
-              height: 30,
-            ),
             Text(
               "Categories",
               style: AppStyles.kBoldHomeTextStyles,
             ),
-            SizedBox(
-              height: 35,
-            ),
             CategoryBadges(),
-            SizedBox(
-              height: 35,
-            ),
             Text(
               "Mystic's Exclusive",
               style: AppStyles.kBoldHomeTextStyles,
-            ),
-            SizedBox(
-              height: 35,
             ),
             wallpapers.when(
               data: (config) {

@@ -9,8 +9,10 @@ class HomeCardListViewNetWork extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Container(
-      height: 370,
+      height: height / 2.5,
       width: double.infinity,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
@@ -28,8 +30,8 @@ class HomeCardListViewNetWork extends StatelessWidget {
                 child: CachedNetworkImage(
                   imageUrl: data[index].thumbnailImg,
                   placeholder: (context, url) => Container(
-                    width: 280,
-                    height: 350,
+                    width: width/2,
+                    height: height / 2,
                     color: Pallete.kSecondaryTeal,
                     child: Center(
                       child: Text(
@@ -38,8 +40,8 @@ class HomeCardListViewNetWork extends StatelessWidget {
                       ),
                     ),
                   ),
-                  width: 280,
-                  height: 350,
+                  width: width/2,
+                  height: height/2,
                   fit: BoxFit.cover,
                   placeholderFadeInDuration: Duration(
                     milliseconds: 10,
