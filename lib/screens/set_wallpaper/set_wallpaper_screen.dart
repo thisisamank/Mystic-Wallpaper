@@ -53,6 +53,7 @@ class SetWallpaperScreen extends StatelessWidget {
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   RawMaterialButton(
                     onPressed: () async {
@@ -74,13 +75,10 @@ class SetWallpaperScreen extends StatelessWidget {
                       child: Center(
                         child: Text(
                           "Set Wallpaper",
-                          style: AppStyles.kCategoryTitleTextStyle,
+                          style: AppStyles.kBoldTextStyle,
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: width / 11,
                   ),
                   RawMaterialButton(
                     onPressed: () {
