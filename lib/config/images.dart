@@ -19,6 +19,10 @@ class ImageStore {
   static final vishnu = 'assets/images/illustrations/vishnu.png';
   static final leftArrow = 'assets/images/icons/arrow-left.png';
   static final loadingImg = 'assets/images/icons/loading.png';
+  static final share = 'assets/images/icons/share.png';
+  static final downloadImg = 'assets/images/icons/download.png';
+  static final arrowLeftOverDownload =
+      'assets/images/icons/arrow-left-over-wallpaper.png';
 }
 
 class AssetImageStore {

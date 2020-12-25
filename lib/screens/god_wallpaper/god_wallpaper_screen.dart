@@ -6,6 +6,7 @@ import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/provider/wallpaper_provider.dart';
 import 'package:mystic_wallpaper/screens/global_widgets/bottom_navbar.dart';
 import 'package:mystic_wallpaper/screens/global_widgets/secondary_appbar.dart';
+import 'package:mystic_wallpaper/screens/set_wallpaper/set_wallpaper_screen.dart';
 
 class GodWallpaperScreen extends HookWidget {
   final title;
@@ -22,7 +23,7 @@ class GodWallpaperScreen extends HookWidget {
       ),
       body: wallpaper.when(
         data: (data) => GodScreenBody(data: data),
-        loading: () => CircularProgressIndicator(),
+        loading: () => Center(child: CircularProgressIndicator()),
         error: (src, str) => Text("Error"),
       ),
       bottomNavigationBar: BottomNavBar(),
@@ -49,29 +50,39 @@ class GodScreenBody extends StatelessWidget {
           mainAxisSpacing: 20,
           crossAxisCount: 2,
           children: List.generate(data.length, (index) {
-            return ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                decoration: BoxDecoration(boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 20.0,
-                  )
-                ]),
-                child: CachedNetworkImage(
-                  imageUrl: data[index].thumbnailImg,
-                  placeholder: (context, url) => Container(
-                    color: Pallete.kSecondaryTeal,
-                    child: Center(
-                      child: Text(
-                        "Loading...",
-                        style: AppStyles.kBigTextStyle,
+            return GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SetWallpaperScreen(
+                              wallpaper: data[index],
+                            )));
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 20.0,
+                    )
+                  ]),
+                  child: CachedNetworkImage(
+                    imageUrl: data[index].thumbnailImg,
+                    placeholder: (context, url) => Container(
+                      color: Pallete.kSecondaryTeal,
+                      child: Center(
+                        child: Text(
+                          "Loading...",
+                          style: AppStyles.kBigTextStyle,
+                        ),
                       ),
                     ),
-                  ),
-                  fit: BoxFit.cover,
-                  placeholderFadeInDuration: Duration(
-                    milliseconds: 10,
+                    fit: BoxFit.cover,
+                    placeholderFadeInDuration: Duration(
+                      milliseconds: 10,
+                    ),
                   ),
                 ),
               ),

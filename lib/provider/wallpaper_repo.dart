@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:http/http.dart' as http;
 import 'package:mystic_wallpaper/keys.dart';
 import 'package:mystic_wallpaper/provider/models/category_wallpaper.dart';
@@ -19,6 +20,28 @@ class WallpaperRepo {
       }
     }
     return wallpapersObj;
+  }
+
+  int getRandomNumber(int till) {
+    return Random().nextInt(till);
+  }
+
+  Future<List<WallpapersModel>> getWallpapersForHomeScreen() async {
+    var url = Keys.baseApiUrl;
+    var res = await http.get(url);
+    List<WallpapersModel> wallpapersObj = [];
+    List wallpapers = jsonDecode(res.body);
+    List<WallpapersModel> homeScreenWallpapers = [];
+    int countWallpaper = 1;
+    for (final wallpaperJson in wallpapers) {
+      final convertedObj = WallpapersModel.fromJson(json: wallpaperJson);
+      wallpapersObj.add(convertedObj);
+    }
+    for (var countWallpaper = 1; countWallpaper <= 5; countWallpaper++) {
+      homeScreenWallpapers
+          .add(wallpapersObj[getRandomNumber(wallpapersObj.length - 1)]);
+    }
+    return homeScreenWallpapers;
   }
 
   Future<List<WallpapersModel>> getWallpaperFromCategory(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/routes/routes.dart';
@@ -8,7 +9,11 @@ import 'package:mystic_wallpaper/screens/god_wallpaper/god_wallpaper_screen.dart
 import 'package:mystic_wallpaper/screens/home/home_screens.dart';
 import 'package:mystic_wallpaper/screens/sidebar/sidebar_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterDownloader.initialize(
+      debug: true // optional: set false to disable printing logs to console
+      );
   runApp(ProviderScope(child: MyApp()));
 }
 

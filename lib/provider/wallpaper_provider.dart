@@ -11,3 +11,7 @@ final wallpaperCategoryProvider = FutureProvider.autoDispose
     .family<List<WallpapersModel>, String>((ref, id) async {
   return WallpaperRepo().getWallpaperFromCategory(categoryId: id);
 });
+final randomWallpapersProvider =
+    FutureProvider.autoDispose<List<WallpapersModel>>((ref) async {
+  return WallpaperRepo().getWallpapersForHomeScreen();
+});

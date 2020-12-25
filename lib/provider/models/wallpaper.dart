@@ -31,6 +31,19 @@ class WallpapersModel extends Equatable {
     );
   }
 
+  factory WallpapersModel.fromSingleWallpaperJson({Map<String, dynamic> json}) {
+    final godCategoryFromJson = json['category']['category'];
+    final godMainImage = json['src'][0]['url'];
+    print(godMainImage);
+    final godThumbnailImage = json['src'][0]['formats']['small']['url'];
+    return WallpapersModel(
+      id: json['id'],
+      godCategory: godCategoryFromJson,
+      wallpaperImg: godMainImage,
+      thumbnailImg: godThumbnailImage,
+    );
+  }
+
   factory WallpapersModel.fromCategoryJson({Map json}) {
     final godMainImage = json['src'][0]['url'];
     final godThumbnailImage = json['src'][0]['formats']['small']['url'];

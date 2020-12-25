@@ -11,7 +11,7 @@ class HomeScreen extends HookWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    final wallpapers = useProvider(wallpaperProvider);
+    final wallpapers = useProvider(randomWallpapersProvider);
     return Container(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 28),
@@ -34,7 +34,13 @@ class HomeScreen extends HookWidget {
                   data: config,
                 );
               },
-              loading: () => CircularProgressIndicator(),
+              loading: () => SizedBox(
+                height: height / 2.5,
+                width: width,
+                child: Center(
+                  child: CircularProgressIndicator(),
+                ),
+              ),
               error: (err, stack) => Text("error"),
             ),
           ],

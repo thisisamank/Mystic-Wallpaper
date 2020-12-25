@@ -28,6 +28,15 @@ dependencies:
   hooks_riverpod: ^0.12.1
   flutter_hooks: ^0.15.0
   cached_network_image: ^2.5.0
+  wallpaper_manager: ^1.0.10
+  flutter_cache_manager: ^2.1.0
+  share: ^0.6.5+4
+  flutter_downloader: ^1.5.2
+  path_provider: ^1.6.24
+  permission_handler: ^5.0.1+1
+  uuid: 2.2.2
+  toast: ^0.1.5
+
 
 
 

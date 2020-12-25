@@ -18,7 +18,6 @@ class CategoryList extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
-            //TODO : Routing
             onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
