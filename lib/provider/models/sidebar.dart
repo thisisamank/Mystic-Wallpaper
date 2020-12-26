@@ -14,6 +14,9 @@ class DrawerData {
     ),
     DrawerData(
       title: "About Us!",
+    ),
+    DrawerData(
+      title: "Clear Cache!",
     )
   ];
 }

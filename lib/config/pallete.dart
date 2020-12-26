@@ -8,6 +8,7 @@ class Pallete {
   static const kBlack = Colors.black;
   static const kSidebarCardColor = Color(0xFFF0F0F0);
   static const kPrimaryBlack = Color(0xFF525458);
+  static const kDrawerLogo = Color(0xFF27D858);
 
   static const kShivaGradientColor = [
     Color(0xFFAEDAF3),

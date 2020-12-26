@@ -19,9 +19,21 @@ class AppDrawer extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                ImageStore.logo,
-                width: 120,
+              Container(
+                width: _screenWidth * 0.32,
+                height: _screenHeight * 0.18,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(250),
+                  color: Pallete.kDrawerLogo,
+                ),
+                child: Center(
+                  child: Image.asset(
+                    ImageStore.logo,
+                    width: _screenWidth * 0.25,
+                    height: _screenHeight * 0.14,
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
               ),
               SizedBox(
                 height: _screenHeight * 0.03,
@@ -56,12 +68,12 @@ class AppDrawer extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: _screenHeight * 0.06,
+                height: _screenHeight * 0.05,
               ),
               Expanded(
                 child: ListView.separated(
                   separatorBuilder: (context, index) => SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   primary: false,
                   itemCount: DrawerData.drawerData.length,
@@ -74,7 +86,7 @@ class AppDrawer extends StatelessWidget {
                       },
                       child: Container(
                         width: _screenWidth * 0.50,
-                        height: _screenHeight * 0.09,
+                        height: _screenHeight * 0.08,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: Pallete.kSidebarCardColor,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/provider/models/category.dart';
+import 'package:mystic_wallpaper/screens/category/category_screen.dart';
+import 'package:mystic_wallpaper/screens/god_wallpaper/god_wallpaper_screen.dart';
 
 class CategoryBadges extends StatelessWidget {
   @override
@@ -12,8 +14,23 @@ class CategoryBadges extends StatelessWidget {
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemBuilder: (BuildContext context, int index) {
+            final data = Category.homePageCategories;
             return RawMaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                // TODO: Implement navigation...
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    if (data[index].id != 0) {
+                      return GodWallpaperScreen(
+                          id: '${data[index].id}',
+                          title: data[index].categoryName);
+                    } else {
+                      return CategoryScreen();
+                    }
+                  }),
+                );
+              },
               child: Container(
                 width: _screenWidth / 3.2,
                 decoration: BoxDecoration(

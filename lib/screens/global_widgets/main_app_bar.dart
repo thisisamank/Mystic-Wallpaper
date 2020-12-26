@@ -30,7 +30,9 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
             width: 40,
           ),
           RawMaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/bookmark');
+            },
             child: Image.asset(
               ImageStore.starSmall,
               width: 25,

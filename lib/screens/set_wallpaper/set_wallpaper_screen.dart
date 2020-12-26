@@ -7,7 +7,6 @@ import 'package:uuid/uuid.dart';
 import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/provider/models/wallpaper.dart';
-import 'package:mystic_wallpaper/provider/set_wallpaper.dart';
 import 'package:wallpaper_manager/wallpaper_manager.dart';
 
 class SetWallpaperScreen extends StatelessWidget {
@@ -82,11 +81,9 @@ class SetWallpaperScreen extends StatelessWidget {
                   ),
                   RawMaterialButton(
                     onPressed: () {
-                      // TODO: download activate
                       downloadImage(
                           wallpaper.wallpaperImg, 'wallpaper ${uuid.v1()}');
                       Toast.show("Downloading started...", context);
-                      print("Clicked!!!!!!!!");
                     },
                     child: Image.asset(
                       ImageStore.downloadImg,
@@ -97,7 +94,6 @@ class SetWallpaperScreen extends StatelessWidget {
                     onPressed: () {
                       Share.share(
                           "Hey Checkout this great app, i am using it to get great wallpapers. visit www.csspoint101.com");
-                      print("Clicked!!!!!!!!");
                     },
                     child: Image.asset(
                       ImageStore.share,

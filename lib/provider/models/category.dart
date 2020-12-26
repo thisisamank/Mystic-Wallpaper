@@ -123,26 +123,25 @@ class Category {
 
   static final homePageCategories = [
     Category(
-      textStyle: AppStyles.kSemiBoldTextStyle,
-      categoryName: 'Shiva',
+      id: 1,
+      categoryName: 'Hanuman',
       flatBackground: Pallete.kPrimaryTeal,
+      textStyle: AppStyles.kSemiBoldTextStyle,
     ),
     Category(
-      textStyle: AppStyles.kSemiBoldTealTextStyle,
-      categoryName: 'Durga',
-      flatBackground: Pallete.kSecondaryTeal,
-    ),
-    Category(
-      textStyle: AppStyles.kSemiBoldTealTextStyle,
+      id: 2,
       categoryName: 'Ganesh',
       flatBackground: Pallete.kSecondaryTeal,
-    ),
-    Category(
       textStyle: AppStyles.kSemiBoldTealTextStyle,
-      categoryName: 'Ram',
-      flatBackground: Pallete.kSecondaryTeal,
     ),
     Category(
+      id: 3,
+      categoryName: 'Shiva',
+      flatBackground: Pallete.kSecondaryTeal,
+      textStyle: AppStyles.kSemiBoldTealTextStyle,
+    ),
+    Category(
+      id: 0,
       textStyle: AppStyles.kSemiBoldTealTextStyle,
       categoryName: 'Show More',
       flatBackground: Pallete.kSecondaryTeal,

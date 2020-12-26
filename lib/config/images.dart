@@ -2,11 +2,16 @@ import 'package:flutter/cupertino.dart';
 
 class ImageStore {
   static final logo = 'assets/images/icons/logo.png';
+  static final amanPhoto = 'assets/images/icons/aman.png';
+  static final jatinPhoto = 'assets/images/icons/jatin.png';
+  static final shatabdiPhoto = 'assets/images/icons/shatabdi.png';
+  static final backgroundForTeam = 'assets/images/icons/background.png';
   static final bottomButton = 'assets/images/icons/bottom-button.png';
   static final hamburgerButton = 'assets/images/icons/hamburger-button.png';
   static final profile = 'assets/images/icons/profile.png';
   static final starSmall = 'assets/images/icons/star.png';
   static final starBig = 'assets/images/icons/star-big.png';
+  static final bot = 'assets/images/illustrations/bot.png';
   static final brahma = 'assets/images/illustrations/brahma.png';
   static final durga = 'assets/images/illustrations/durga.png';
   static final ganesh = 'assets/images/illustrations/ganesh.png';
