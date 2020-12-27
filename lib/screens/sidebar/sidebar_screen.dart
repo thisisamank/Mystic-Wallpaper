@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/constants.dart';
 import 'package:mystic_wallpaper/provider/models/sidebar.dart';
+import 'package:toast/toast.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -82,6 +84,13 @@ class AppDrawer extends StatelessWidget {
                       onPressed: () {
                         if (index == 0) {
                           Navigator.pushNamed(context, '/categories');
+                        } else if (index == 1) {
+                          Navigator.pushNamed(context, '/bookmark');
+                        } else if (index == 2) {
+                          Navigator.pushNamed(context, '/about');
+                        } else if (index == 3) {
+                          DefaultCacheManager().emptyCache();
+                          Toast.show("Cache cleared!!", context);
                         }
                       },
                       child: Container(

@@ -17,7 +17,6 @@ class CategoryBadges extends StatelessWidget {
             final data = Category.homePageCategories;
             return RawMaterialButton(
               onPressed: () {
-                // TODO: Implement navigation...
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
