@@ -20,7 +20,7 @@ class Team {
     ),
     Team(
       name: "Shatabdi Roy",
-      work: "Illustrations",
+      work: "Illustrator",
       photo: ImageStore.shatabdiPhoto,
     ),
   ];

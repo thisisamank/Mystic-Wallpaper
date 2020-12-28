@@ -58,6 +58,8 @@ class SetWallpaperScreen extends StatelessWidget {
                 children: [
                   RawMaterialButton(
                     onPressed: () async {
+                      Toast.show("Setting up wallpaper, please wait!", context);
+
                       var file = await DefaultCacheManager()
                           .getSingleFile(wallpaper.wallpaperImg);
 
