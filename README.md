@@ -1,16 +1,44 @@
-# mystic_wallpaper
+# Mystic Wallpaper
 
-A new Flutter project.
+This is a wallpaper app of Hindu God's with Beautiful UI and good performance. 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Screenshots:
 
-A few resources to get you started if this is your first Flutter project:
+<img src="public/images/home.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />    <img src="public/images/drawer.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />   <img src="public/images/category.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />   <img src="public/images/show-wallpapers.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />    
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+ <img src="public/images/set-wallpapers.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" /> 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+### Folder Structure
+
+```
+📦lib
+ ┣ 📂config - this folder contains colors, text styles and other constants.
+ ┣ 📂models - this folder contains all the models used in this app
+ ┣ 📂provider - this folder calls api, converts to model objects and it uses riverpod to provide this				data to UI.
+ ┣ 📂routes - all the routes
+ ┣ 📂screens - all the screens of this app
+ ┃ ┣ 📂about_us
+ ┃ ┣ 📂bookmarked
+ ┃ ┣ 📂category
+ ┃ ┃ ┣ 📂widget - widgets used for category screen
+ ┃ ┣ 📂global_widgets - widgets common to all screens
+ ┃ ┣ 📂god_wallpaper
+ ┃ ┣ 📂home
+ ┃ ┃ ┣ 📂widgets
+ ┃ ┣ 📂set_wallpaper
+ ┃ ┗ 📂sidebar
+ ┗ 📜main.dart
+```
+
+```english
+/* Copyright (C) by Author: Aman Kumar(thisisamank), - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Aman Kumar <thisisamank@gmail.com>, December 2020
+ */
+```
+
