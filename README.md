@@ -18,7 +18,7 @@ This is a wallpaper app of Hindu God's with Beautiful UI and good performance.
 📦lib
  ┣ 📂config - this folder contains colors, text styles and other constants.
  ┣ 📂models - this folder contains all the models used in this app
- ┣ 📂provider - this folder calls api, converts to model objects and it uses riverpod to provide this				data to UI.
+ ┣ 📂provider - this folder calls api, converts to model objects and it uses riverpod to provide this data to UI.
  ┣ 📂routes - all the routes
  ┣ 📂screens - all the screens of this app
  ┃ ┣ 📂about_us
