@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:mystic_wallpaper/screens/global_widgets/error.dart';
 import 'package:toast/toast.dart';
 import 'package:mystic_wallpaper/provider/wallpaper_downloader.dart';
 import 'package:share/share.dart';
@@ -28,6 +29,7 @@ class SetWallpaperScreen extends StatelessWidget {
             placeholder: (context, str) => Center(
               child: CircularProgressIndicator(),
             ),
+            errorWidget: (ctx, string, err) => SthWentWrongError(),
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 30),

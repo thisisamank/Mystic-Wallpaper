@@ -9,6 +9,11 @@ class SecondaryAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     final _screenWidth = MediaQuery.of(context).size.width;
     return AppBar(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          bottom: Radius.circular(20),
+        ),
+      ),
       titleSpacing: -_screenWidth * 0.15,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

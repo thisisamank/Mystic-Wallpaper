@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/provider/wallpaper_provider.dart';
+import 'package:mystic_wallpaper/screens/global_widgets/error.dart';
 import 'package:mystic_wallpaper/screens/home/widgets/category_badge.dart';
 import 'package:mystic_wallpaper/screens/home/widgets/home_card_listview_network.dart';
 
@@ -41,7 +42,7 @@ class HomeScreen extends HookWidget {
                   child: CircularProgressIndicator(),
                 ),
               ),
-              error: (err, stack) => Text("error"),
+              error: (err, stack) => SthWentWrongError(),
             ),
           ],
         ),

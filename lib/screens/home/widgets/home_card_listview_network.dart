@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:mystic_wallpaper/config/config.dart';
+import 'package:mystic_wallpaper/screens/global_widgets/loading.dart';
 import 'package:mystic_wallpaper/screens/set_wallpaper/set_wallpaper_screen.dart';
 
 class HomeCardListViewNetWork extends StatelessWidget {
@@ -41,16 +41,7 @@ class HomeCardListViewNetWork extends StatelessWidget {
                   ]),
                   child: CachedNetworkImage(
                     imageUrl: data[index].thumbnailImg,
-                    placeholder: (context, url) => Container(
-                      width: width / 2,
-                      color: Pallete.kSecondaryTeal,
-                      child: Center(
-                        child: Text(
-                          "Loading...",
-                          style: AppStyles.kBigTextStyle,
-                        ),
-                      ),
-                    ),
+                    placeholder: (context, url) => Loading(),
                     width: width / 2,
                     height: height / 2,
                     fit: BoxFit.cover,

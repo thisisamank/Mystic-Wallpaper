@@ -5,6 +5,8 @@ import 'package:hooks_riverpod/all.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/provider/wallpaper_provider.dart';
 import 'package:mystic_wallpaper/screens/global_widgets/bottom_navbar.dart';
+import 'package:mystic_wallpaper/screens/global_widgets/error.dart';
+import 'package:mystic_wallpaper/screens/global_widgets/loading.dart';
 import 'package:mystic_wallpaper/screens/global_widgets/secondary_appbar.dart';
 import 'package:mystic_wallpaper/screens/set_wallpaper/set_wallpaper_screen.dart';
 
@@ -70,19 +72,12 @@ class GodScreenBody extends StatelessWidget {
                   ]),
                   child: CachedNetworkImage(
                     imageUrl: data[index].thumbnailImg,
-                    placeholder: (context, url) => Container(
-                      color: Pallete.kSecondaryTeal,
-                      child: Center(
-                        child: Text(
-                          "Loading...",
-                          style: AppStyles.kBigTextStyle,
-                        ),
-                      ),
-                    ),
+                    placeholder: (context, url) => Loading(),
                     fit: BoxFit.cover,
                     placeholderFadeInDuration: Duration(
                       milliseconds: 10,
                     ),
+                    errorWidget: (ctx, string, err) => SthWentWrongError(),
                   ),
                 ),
               ),
