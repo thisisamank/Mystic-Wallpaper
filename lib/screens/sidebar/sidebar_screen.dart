@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/constants.dart';
-import 'package:mystic_wallpaper/provider/models/sidebar.dart';
+import 'package:mystic_wallpaper/models/sidebar.dart';
 import 'package:toast/toast.dart';
 
 class AppDrawer extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:mystic_wallpaper/provider/models/wallpaper.dart';
+import 'package:mystic_wallpaper/models/wallpaper.dart';
 
 class CategoryWithWallpaper {
   List<WallpapersModel> wallpapers;

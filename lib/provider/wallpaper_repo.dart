@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:http/http.dart' as http;
 import 'package:mystic_wallpaper/keys.dart';
-import 'package:mystic_wallpaper/provider/models/category_wallpaper.dart';
-import 'package:mystic_wallpaper/provider/models/wallpaper.dart';
+import 'package:mystic_wallpaper/models/category_wallpaper.dart';
+import 'package:mystic_wallpaper/models/wallpaper.dart';
 
 class WallpaperRepo {
   Future<List<WallpapersModel>> getWallpapersThumbnail() async {
@@ -32,7 +32,6 @@ class WallpaperRepo {
     List<WallpapersModel> wallpapersObj = [];
     List wallpapers = jsonDecode(res.body);
     List<WallpapersModel> homeScreenWallpapers = [];
-    int countWallpaper = 1;
     for (final wallpaperJson in wallpapers) {
       final convertedObj = WallpapersModel.fromJson(json: wallpaperJson);
       wallpapersObj.add(convertedObj);

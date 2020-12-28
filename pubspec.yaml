@@ -36,6 +36,7 @@ dependencies:
   permission_handler: ^5.0.1+1
   uuid: 2.2.2
   toast: ^0.1.5
+  admob_flutter: ^1.0.1
 
 
 

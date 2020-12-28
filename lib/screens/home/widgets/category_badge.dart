@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mystic_wallpaper/provider/models/category.dart';
+import 'package:mystic_wallpaper/models/category.dart';
 import 'package:mystic_wallpaper/screens/category/category_screen.dart';
 import 'package:mystic_wallpaper/screens/god_wallpaper/god_wallpaper_screen.dart';
 

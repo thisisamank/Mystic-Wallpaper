@@ -15,6 +15,7 @@ class AboutUsScreen extends StatelessWidget {
       body: AboutUsBody(),
       bottomNavigationBar: BottomNavBar(
         centerButtonRoute: "/categories",
+        leftButtonRoute: '/bookmark',
       ),
     );
   }

@@ -7,7 +7,7 @@ import 'package:share/share.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/config/config.dart';
-import 'package:mystic_wallpaper/provider/models/wallpaper.dart';
+import 'package:mystic_wallpaper/models/wallpaper.dart';
 import 'package:wallpaper_manager/wallpaper_manager.dart';
 
 class SetWallpaperScreen extends StatelessWidget {
@@ -25,7 +25,7 @@ class SetWallpaperScreen extends StatelessWidget {
             imageUrl: wallpaper.wallpaperImg,
             width: width,
             height: height,
-            fit: BoxFit.fitHeight,
+            fit: BoxFit.cover,
             placeholder: (context, str) => Center(
               child: CircularProgressIndicator(),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/images.dart';
-import 'package:mystic_wallpaper/provider/models/team.dart';
+import 'package:mystic_wallpaper/models/team.dart';
 
 class AboutUsBody extends StatelessWidget {
   @override
@@ -75,7 +75,7 @@ class AboutUsBody extends StatelessWidget {
                             child: Column(
                               children: [
                                 Container(
-                                  width: width / 2,
+                                  width: width / 2.3,
                                   height: 30,
                                   decoration: BoxDecoration(
                                       gradient: LinearGradient(
@@ -94,7 +94,7 @@ class AboutUsBody extends StatelessWidget {
                                   height: 20,
                                 ),
                                 Container(
-                                  width: width / 2,
+                                  width: width / 2.3,
                                   height: 30,
                                   decoration: BoxDecoration(
                                       color: Pallete.kPrimaryTeal,
