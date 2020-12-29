@@ -1,3 +1,4 @@
+import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:hooks_riverpod/all.dart';
@@ -16,6 +17,7 @@ void main() async {
   await FlutterDownloader.initialize(
       debug: true // optional: set false to disable printing logs to console
       );
+  Admob.initialize();
   runApp(ProviderScope(child: MyApp()));
 }
 
@@ -25,7 +27,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: routes,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(appBarTheme: AppStyles.kMainAppBarTheme),
+      theme: ThemeData(
+        appBarTheme: AppStyles.kMainAppBarTheme,
+        primaryColor: Pallete.kPrimaryTeal,
+      ),
       home: Scaffold(
         backgroundColor: Pallete.kSidebarCardColor,
         body: HomeScreen(),

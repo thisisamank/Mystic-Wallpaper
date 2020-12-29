@@ -100,7 +100,7 @@ class Category {
       ),
     ),
     Category(
-      id: 10, //This is done to map with API DON'T CHANGE
+      id: 10, //This is done to map with API, DON'T CHANGE
       categoryName: 'Saraswati Maa',
       illustation: ImageStore.saraswati,
       background: LinearGradient(

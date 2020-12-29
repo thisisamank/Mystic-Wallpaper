@@ -1,4 +1,6 @@
+import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:mystic_wallpaper/config/admob_constants.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -12,6 +14,7 @@ class BottomNavBar extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    var adMobConstants = AdMobConstants();
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
@@ -30,7 +33,6 @@ class BottomNavBar extends StatelessWidget {
                 if (leftButtonRoute != null) {
                   Navigator.pushNamed(context, leftButtonRoute);
                 }
-                print("Clicked");
               },
               child: Image.asset(
                 ImageStore.starBig,
