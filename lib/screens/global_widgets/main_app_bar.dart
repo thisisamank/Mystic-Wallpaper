@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 
 class MainAppBar extends StatelessWidget with PreferredSizeWidget {
+  var routeName;
+  MainAppBar({this.routeName});
+
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return AppBar(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
@@ -11,34 +15,28 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
         ),
       ),
       automaticallyImplyLeading: false,
-      titleSpacing: -5,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          RawMaterialButton(
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-            child: Image.asset(
-              ImageStore.hamburgerButton,
-              width: 40,
-            ),
-          ),
-          Image.asset(
-            ImageStore.logo,
-            width: 40,
-          ),
-          RawMaterialButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/bookmark');
-            },
-            child: Image.asset(
-              ImageStore.starSmall,
-              width: 25,
-            ),
-          )
-        ],
+      leadingWidth: width / 4,
+      centerTitle: true,
+      leading: RawMaterialButton(
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        },
+        child: Image.asset(
+          ImageStore.hamburgerButton,
+          width: 40,
+        ),
+      ),
+      title: RawMaterialButton(
+        onPressed: () {
+          Navigator.pop(context);
+          // if (routeName != null) {
+          //   Navigator.pushNamed(context, routeName);
+          // }
+        },
+        child: Image.asset(
+          ImageStore.logo,
+          width: 45,
+        ),
       ),
     );
   }

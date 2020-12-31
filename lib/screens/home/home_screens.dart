@@ -33,20 +33,21 @@ class HomeScreen extends HookWidget {
               style: AppStyles.kBoldHomeTextStyles,
             ),
             wallpapers.when(
-              data: (config) {
-                return HomeCardListViewNetWork(
-                  data: config,
-                );
-              },
-              loading: () => SizedBox(
-                height: height / 2.5,
-                width: width,
-                child: Center(
-                  child: CircularProgressIndicator(),
-                ),
-              ),
-              error: (err, stack) => SthWentWrongError(),
-            ),
+                data: (config) {
+                  return HomeCardListViewNetWork(
+                    data: config,
+                  );
+                },
+                loading: () => SizedBox(
+                      height: height / 2.5,
+                      width: width,
+                      child: Center(
+                        child: CircularProgressIndicator(),
+                      ),
+                    ),
+                error: (err, stack) => Center(
+                      child: SthWentWrongError(),
+                    )),
             AdmobBanner(
                 adUnitId: adMobConstants.bannerAdId,
                 adSize: AdmobBannerSize.BANNER),

@@ -5,6 +5,6 @@ import 'package:mystic_wallpaper/screens/category/category_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
   CategoryScreen.route: (context) => CategoryScreen(),
-  BookkarkScreen.route: (context) => BookkarkScreen(),
+  BookmarkScreen.route: (context) => BookmarkScreen(),
   AboutUsScreen.route: (context) => AboutUsScreen()
 };

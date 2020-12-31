@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         appBar: MainAppBar(),
         drawer: AppDrawer(),
         bottomNavigationBar: BottomNavBar(
-          leftButtonRoute: BookkarkScreen.route,
+          leftButtonRoute: BookmarkScreen.route,
           rightButtonRoute: AboutUsScreen.route,
           centerButtonRoute: CategoryScreen.route,
         ),

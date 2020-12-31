@@ -22,8 +22,6 @@ class SetWallpaperScreen extends StatefulWidget {
 }
 
 class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
-  AdMobConstants adMobConstants = AdMobConstants();
-
   @override
   Widget build(BuildContext context) {
     final uuid = Uuid();
@@ -67,9 +65,6 @@ class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  AdmobBanner(
-                      adUnitId: adMobConstants.bannerAdId,
-                      adSize: AdmobBannerSize.BANNER),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

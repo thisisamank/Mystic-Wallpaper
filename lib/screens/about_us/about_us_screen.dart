@@ -7,10 +7,13 @@ import 'about_us_body.dart';
 
 class AboutUsScreen extends StatelessWidget {
   static final route = '/about';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(),
+      appBar: MainAppBar(
+        routeName: '/',
+      ),
       drawer: AppDrawer(),
       body: AboutUsBody(),
       bottomNavigationBar: BottomNavBar(

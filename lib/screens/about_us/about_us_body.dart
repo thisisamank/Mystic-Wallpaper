@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart' as launcher;
+
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/images.dart';
 import 'package:mystic_wallpaper/models/team.dart';
@@ -6,6 +8,8 @@ import 'package:mystic_wallpaper/models/team.dart';
 class AboutUsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final mailUri = Uri(scheme: 'mailto', path: 'visn.studios@gmail.com');
+
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     final teamData = Team.teamList;
@@ -16,7 +20,70 @@ class AboutUsBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(ImageStore.backgroundForTeam),
+            Stack(
+              children: [
+                Image.asset(ImageStore.backgroundForTeam),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: height / 20,
+                        ),
+                        RawMaterialButton(
+                          onPressed: () {},
+                          child: Image.asset(
+                            ImageStore.logo,
+                            width: width / 4,
+                          ),
+                        ),
+                        RawMaterialButton(
+                          onPressed: () {
+                            launcher.launch(mailUri.toString());
+                          },
+                          child: Image.asset(
+                            ImageStore.contactButton,
+                            width: width / 4,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Vision Studios",
+                          style: TextStyle(
+                            fontFamily: 'Nunito',
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Pallete.kBrahmaGradientColor[1],
+                          ),
+                        ),
+                        Text(
+                          "We at Visn Studios\nmake web & mobile \napps that matters!",
+                          style: TextStyle(
+                            fontFamily: 'Nunito',
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          "visn.studios@gmail.com",
+                          style: TextStyle(
+                            fontFamily: 'Nunito',
+                            fontSize: 20,
+                            color: Pallete.kBrahmaGradientColor[1],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
             SizedBox(
               height: 15,
             ),

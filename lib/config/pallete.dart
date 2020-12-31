@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 // This file contains the color used in whole app
@@ -50,4 +52,24 @@ class Pallete {
     Color(0xFFC3E4EA),
     Color(0xFF92E9F9),
   ];
+
+  static const colorsForCard = [
+    Colors.green,
+    Colors.yellow,
+    Colors.orange,
+    Colors.red,
+    Colors.amber,
+    Colors.blue,
+    Colors.lightBlue,
+    Colors.redAccent,
+    Colors.greenAccent,
+    Colors.teal,
+    Colors.cyan
+  ];
+
+  static Color getRandomColor() {
+    int random = Random().nextInt(colorsForCard.length);
+    //print("getRandomColor() called $random");
+    return colorsForCard[random];
+  }
 }

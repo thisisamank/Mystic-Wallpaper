@@ -18,7 +18,7 @@ class CategoryScreen extends StatelessWidget {
       backgroundColor: Pallete.kSidebarCardColor,
       body: CategoryList(),
       bottomNavigationBar: BottomNavBar(
-        leftButtonRoute: BookkarkScreen.route,
+        leftButtonRoute: BookmarkScreen.route,
         rightButtonRoute: AboutUsScreen.route,
       ),
     );

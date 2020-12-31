@@ -37,6 +37,7 @@ dependencies:
   uuid: 2.2.2
   toast: ^0.1.5
   admob_flutter: ^1.0.1
+  url_launcher: ^5.7.10
 
 
 
@@ -51,6 +52,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  change_app_package_name: ^0.1.2
+
 
 
 # For information on the generic Dart part of this file, see the

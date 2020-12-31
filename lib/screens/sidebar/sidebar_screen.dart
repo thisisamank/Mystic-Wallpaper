@@ -25,7 +25,7 @@ class AppDrawer extends StatelessWidget {
                 width: _screenWidth * 0.32,
                 height: _screenHeight * 0.18,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(250),
+                  borderRadius: BorderRadius.circular(2000),
                   color: Pallete.kDrawerLogo,
                 ),
                 child: Center(
