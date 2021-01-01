@@ -23,15 +23,14 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
         },
         child: Image.asset(
           ImageStore.hamburgerButton,
-          width: 40,
+          width: 37,
         ),
       ),
       title: RawMaterialButton(
         onPressed: () {
-          Navigator.pop(context);
-          // if (routeName != null) {
-          //   Navigator.pushNamed(context, routeName);
-          // }
+          if (routeName != null) {
+            Navigator.pushNamed(context, routeName);
+          }
         },
         child: Image.asset(
           ImageStore.logo,

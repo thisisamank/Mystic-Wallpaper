@@ -22,6 +22,21 @@ class SetWallpaperScreen extends StatefulWidget {
 }
 
 class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
+  AdmobInterstitial interstitialAd;
+
+  @override
+  void initState() {
+    super.initState();
+    interstitialAd = AdmobInterstitial(
+      adUnitId: AdMobConstants().interstitialAdId,
+      listener: (AdmobAdEvent event, Map<String, dynamic> args) {
+        if (event == AdmobAdEvent.closed) interstitialAd.load();
+      },
+    );
+    interstitialAd.load();
+    Admob.initialize();
+  }
+
   @override
   Widget build(BuildContext context) {
     final uuid = Uuid();
@@ -82,6 +97,9 @@ class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
                           if (result == "Wallpaper set") {
                             Toast.show("Wallpaper Set!", context);
                           }
+                          if (await interstitialAd.isLoaded) {
+                            interstitialAd.show();
+                          }
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -99,10 +117,13 @@ class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
                         ),
                       ),
                       RawMaterialButton(
-                        onPressed: () {
+                        onPressed: () async {
                           downloadImage(widget.wallpaper.wallpaperImg,
                               'wallpaper ${uuid.v1()}');
                           Toast.show("Downloading started...", context);
+                          if (await interstitialAd.isLoaded) {
+                            interstitialAd.show();
+                          }
                         },
                         child: Image.asset(
                           ImageStore.downloadImg,
@@ -112,7 +133,7 @@ class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
                       RawMaterialButton(
                         onPressed: () {
                           Share.share(
-                              "Hey Checkout this great app, i am using it to get great wallpapers. visit www.csspoint101.com");
+                              "Hey! Checkout this app, i am using it to get great wallpapers. visit https://play.google.com/store/apps/details?id=com.visnstudios.mystic_wallpaper");
                         },
                         child: Image.asset(
                           ImageStore.share,
@@ -128,10 +149,5 @@ class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
         ],
       ),
     );
-  }
-
-  @override
-  void initState() {
-    Admob.initialize();
   }
 }

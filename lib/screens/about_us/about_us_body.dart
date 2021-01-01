@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' as launcher;
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/images.dart';
@@ -44,7 +45,7 @@ class AboutUsBody extends StatelessWidget {
                           },
                           child: Image.asset(
                             ImageStore.contactButton,
-                            width: width / 4,
+                            width: width / 3.3,
                           ),
                         ),
                       ],
@@ -62,13 +63,19 @@ class AboutUsBody extends StatelessWidget {
                             color: Pallete.kBrahmaGradientColor[1],
                           ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Text(
                           "We at Visn Studios\nmake web & mobile \napps that matters!",
                           style: TextStyle(
                             fontFamily: 'Nunito',
-                            fontSize: 20,
+                            fontSize: 16,
                             color: Colors.white,
                           ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Text(
                           "visn.studios@gmail.com",
@@ -137,46 +144,87 @@ class AboutUsBody extends StatelessWidget {
                           SizedBox(
                             width: 20,
                           ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: 30),
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: width / 2.3,
-                                  height: 30,
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        begin: Alignment.centerLeft,
-                                        end: Alignment.centerRight,
-                                        colors: Pallete.kGaneshGradientColor,
-                                      ),
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: Center(
-                                      child: Text(
-                                    Team.teamList[index].name,
-                                    style: AppStyles.kCategoryTitleTextStyle,
-                                  )),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Container(
-                                  width: width / 2.3,
-                                  height: 30,
-                                  decoration: BoxDecoration(
-                                      color: Pallete.kPrimaryTeal,
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: Center(
-                                      child: Text(
-                                    Team.teamList[index].work,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 18),
-                                  )),
-                                ),
-                              ],
-                            ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: width / 2.3,
+                                height: 30,
+                                decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.centerLeft,
+                                      end: Alignment.centerRight,
+                                      colors: Pallete.kGaneshGradientColor,
+                                    ),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Center(
+                                    child: Text(
+                                  Team.teamList[index].name,
+                                  style: AppStyles.kCategoryTitleTextStyle,
+                                )),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                width: width / 2.3,
+                                height: 30,
+                                decoration: BoxDecoration(
+                                    color: Pallete.kPrimaryTeal,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Center(
+                                    child: Text(
+                                  Team.teamList[index].work,
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
+                                )),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: Team.teamList[index].socials != null
+                                    ? [
+                                        IconButton(
+                                            onPressed: () {
+                                              launcher.launch(Uri(
+                                                scheme: 'mailto',
+                                                path: Team.teamList[index]
+                                                    .socials.email,
+                                              ).toString());
+                                            },
+                                            icon: Icon(
+                                              Icons.email,
+                                              color: Pallete.kPrimaryTeal,
+                                              size: 28,
+                                            )),
+                                        IconButton(
+                                          onPressed: () {
+                                            launcher.launch(Team.teamList[index]
+                                                .socials.website);
+                                          },
+                                          icon: Icon(
+                                            Icons.language,
+                                            color: Pallete.kPrimaryTeal,
+                                            size: 28,
+                                          ),
+                                        ),
+                                        IconButton(
+                                            onPressed: () {
+                                              launcher.launch(Team
+                                                  .teamList[index]
+                                                  .socials
+                                                  .instagram);
+                                            },
+                                            icon: Icon(
+                                              FontAwesomeIcons.instagram,
+                                              color: Pallete.kPrimaryTeal,
+                                              size: 28,
+                                            )),
+                                      ]
+                                    : [],
+                              )
+                            ],
                           )
                         ],
                       ),

@@ -38,6 +38,7 @@ dependencies:
   toast: ^0.1.5
   admob_flutter: ^1.0.1
   url_launcher: ^5.7.10
+  font_awesome_flutter: ^8.11.0
 
 
 
