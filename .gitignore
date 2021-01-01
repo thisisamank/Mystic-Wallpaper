@@ -42,3 +42,5 @@ app.*.map.json
 
 keys.dart
 /android/key.properties
+my-release-key.keystore
+android\app\google-services.json
