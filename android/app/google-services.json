@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "848957295595",
+    "project_id": "mystic-wallpapers-firebase",
+    "storage_bucket": "mystic-wallpapers-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848957295595:android:8a17be3ecef769dba9a7ae",
+        "android_client_info": {
+          "package_name": "com.visnstudios.mystic_wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848957295595-bmdhorqedn32v7bokdablbe834rpnq22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8hl6mJKZLPxh_lS34HuXKMq36TEGV_NQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848957295595-bmdhorqedn32v7bokdablbe834rpnq22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-9613836349537279~7987902129"
+    }
+  ],
+  "configuration_version": "1"
+}
