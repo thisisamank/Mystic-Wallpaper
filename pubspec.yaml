@@ -87,7 +87,7 @@ flutter:
   fonts:
     - family: Nunito
       fonts:
-        - asset: assets/fonts\Nunito-Bold.ttf
+        - asset: assets/fonts/Nunito-Bold.ttf
           weight: 700
         - asset: assets/fonts/Nunito-ExtraBold.ttf
           weight: 800
