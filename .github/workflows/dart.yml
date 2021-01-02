@@ -19,7 +19,6 @@ jobs:
       with:
         flutter-version: '1.22.4'
     - run: flutter pub get
-    - run: flutter test
     - run: flutter build appbundle
-    - run: flutter buil apk --split-per-abi
+    - run: flutter build apk --split-per-abi
 
