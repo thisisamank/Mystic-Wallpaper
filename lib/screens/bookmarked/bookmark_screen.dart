@@ -15,7 +15,9 @@ class BookmarkScreen extends StatelessWidget {
     final _screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: MainAppBar(),
+      appBar: MainAppBar(
+        routeName: '/',
+      ),
       bottomNavigationBar: BottomNavBar(
         rightButtonRoute: AboutUsScreen.route,
         centerButtonRoute: CategoryScreen.route,

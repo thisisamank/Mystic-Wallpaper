@@ -14,7 +14,7 @@ class Category {
   final id;
   final textStyle;
   final categoryName;
-  final numberOfImages = 30;
+  final numberOfImages = '20+';
   final background;
   final illustation;
   final flatBackground;
@@ -79,16 +79,16 @@ class Category {
         colors: Pallete.kVishnuGradientColor,
       ),
     ),
-    Category(
-      id: 7,
-      categoryName: 'Lord Brahma',
-      illustation: ImageStore.brahma,
-      background: LinearGradient(
-        begin: Alignment.centerLeft,
-        end: Alignment.centerRight,
-        colors: Pallete.kBrahmaGradientColor,
-      ),
-    ),
+    // Category(
+    //   id: 7,
+    //   categoryName: 'Lord Brahma',
+    //   illustation: ImageStore.brahma,
+    //   background: LinearGradient(
+    //     begin: Alignment.centerLeft,
+    //     end: Alignment.centerRight,
+    //     colors: Pallete.kBrahmaGradientColor,
+    //   ),
+    // ),
     Category(
       id: 8,
       categoryName: 'Lord Ram',

@@ -21,9 +21,12 @@ class AppDrawer extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 20,
+              ),
               Container(
-                width: _screenWidth * 0.32,
-                height: _screenHeight * 0.18,
+                width: 120,
+                height: 120,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(2000),
                   color: Pallete.kDrawerLogo,
