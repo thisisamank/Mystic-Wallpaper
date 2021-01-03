@@ -35,7 +35,7 @@ class AboutUsBody extends StatelessWidget {
                         RawMaterialButton(
                           onPressed: () {},
                           child: Image.asset(
-                            ImageStore.logo,
+                            ImageStore.visnLogo,
                             width: width / 4,
                           ),
                         ),
@@ -55,7 +55,7 @@ class AboutUsBody extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Vision Studios",
+                          "Visn Studios",
                           style: TextStyle(
                             fontFamily: 'Nunito',
                             fontSize: 24,

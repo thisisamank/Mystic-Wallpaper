@@ -56,7 +56,7 @@ class AppDrawer extends StatelessWidget {
                 color: Pallete.kPrimaryTeal,
               ),
               SizedBox(
-                height: _screenHeight * 0.04,
+                height: _screenHeight * 0.03,
               ),
               Container(
                 width: _screenWidth * 0.55,
@@ -73,7 +73,7 @@ class AppDrawer extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: _screenHeight * 0.05,
+                height: _screenHeight * 0.04,
               ),
               Expanded(
                 child: ListView.separated(

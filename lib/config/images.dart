@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class ImageStore {
   static final logo = 'assets/images/icons/logo.png';
+  static final visnLogo = 'assets/images/icons/logo-visn.png';
   static final contactButton = 'assets/images/icons/contact-button.png';
   static final amanPhoto = 'assets/images/icons/aman.png';
   static final jatinPhoto = 'assets/images/icons/jatin.png';

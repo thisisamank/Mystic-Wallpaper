@@ -34,7 +34,7 @@ class AppStyles {
   );
   static final kCategoryTitleTextStyle = TextStyle(
     fontFamily: "Nunito",
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w700,
     color: Pallete.kPrimaryTeal,
     fontSize: 20,
   );
@@ -47,7 +47,7 @@ class AppStyles {
   static final kBoldHomeTextStyles = TextStyle(
     color: Pallete.kPrimaryTeal,
     fontSize: 24,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w700,
     fontFamily: 'Nunito',
   );
   static final kMainAppBarTheme = AppBarTheme(
