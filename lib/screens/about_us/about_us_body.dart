@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart' as launcher;
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:mystic_wallpaper/screens/about_us/social_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:mystic_wallpaper/config/config.dart';
 import 'package:mystic_wallpaper/config/images.dart';
 import 'package:mystic_wallpaper/models/team.dart';
@@ -33,6 +32,7 @@ class AboutUsBody extends StatelessWidget {
                           height: height / 20,
                         ),
                         RawMaterialButton(
+                          padding: EdgeInsets.zero,
                           onPressed: () {},
                           child: Image.asset(
                             ImageStore.visnLogo,
@@ -40,8 +40,9 @@ class AboutUsBody extends StatelessWidget {
                           ),
                         ),
                         RawMaterialButton(
+                          padding: EdgeInsets.zero,
                           onPressed: () {
-                            launcher.launch(mailUri.toString());
+                            launch(mailUri.toString());
                           },
                           child: Image.asset(
                             ImageStore.contactButton,
@@ -181,49 +182,7 @@ class AboutUsBody extends StatelessWidget {
                                       fontSize: 18),
                                 )),
                               ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: Team.teamList[index].socials != null
-                                    ? [
-                                        IconButton(
-                                            onPressed: () {
-                                              launcher.launch(Uri(
-                                                scheme: 'mailto',
-                                                path: Team.teamList[index]
-                                                    .socials.email,
-                                              ).toString());
-                                            },
-                                            icon: Icon(
-                                              Icons.email,
-                                              color: Pallete.kPrimaryTeal,
-                                              size: 28,
-                                            )),
-                                        IconButton(
-                                          onPressed: () {
-                                            launcher.launch(Team.teamList[index]
-                                                .socials.website);
-                                          },
-                                          icon: Icon(
-                                            Icons.language,
-                                            color: Pallete.kPrimaryTeal,
-                                            size: 28,
-                                          ),
-                                        ),
-                                        IconButton(
-                                            onPressed: () {
-                                              launcher.launch(Team
-                                                  .teamList[index]
-                                                  .socials
-                                                  .instagram);
-                                            },
-                                            icon: Icon(
-                                              FontAwesomeIcons.instagram,
-                                              color: Pallete.kPrimaryTeal,
-                                              size: 28,
-                                            )),
-                                      ]
-                                    : [],
-                              )
+                              SocialsWidgets(Team.teamList[index].socials)
                             ],
                           )
                         ],

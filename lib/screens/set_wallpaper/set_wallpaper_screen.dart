@@ -119,7 +119,7 @@ class _SetWallpaperScreenState extends State<SetWallpaperScreen> {
                       RawMaterialButton(
                         onPressed: () async {
                           downloadImage(widget.wallpaper.wallpaperImg,
-                              'wallpaper ${uuid.v1()}');
+                              'wallpaper ${uuid.v1()}.jpg');
                           Toast.show("Downloading started...", context);
                           if (await interstitialAd.isLoaded) {
                             interstitialAd.show();
