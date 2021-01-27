@@ -1,14 +1,14 @@
 # Mystic Wallpaper
 
-This is a wallpaper app of Hindu God's with Beautiful UI and good performance. 
+This is a wallpaper app of Hindu God's with Beautiful UI and good performance. [Link](https://play.google.com/store/apps/details?id=com.visnstudios.mystic_wallpaper)
 
 ## Getting Started
 
 ### Screenshots:
 
-<img src="public/images/home.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />    <img src="public/images/drawer.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />   <img src="public/images/category.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />   <img src="public/images/show-wallpapers.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" />    
+<img src="public/images/home.jpeg" width=350 alt="alt text" title="Home Screen"  />    <img src="public/images/drawer.jpeg" width=350 alt="alt text" title="Home Screen" />   <img src="public/images/category.jpeg" alt="alt text" title="Home Screen" width=350 />   <img src="public/images/show-wallpapers.jpeg" alt="alt text" title="Home Screen" width=350 />    
 
- <img src="public/images/set-wallpapers.jpeg" alt="alt text" title="Home Screen" style="zoom:35%;" /> 
+ <img src="public/images/set-wallpapers.jpeg" alt="alt text" title="Home Screen" width=350 /> 
 
 
 
